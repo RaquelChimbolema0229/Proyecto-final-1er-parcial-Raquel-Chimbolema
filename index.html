@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8ed8e8">
+  <title>La misión del océano</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="bubble-layer" id="bubbleLayer" aria-hidden="true"></div>
+  <main class="game-shell">
+    <section id="welcomeScreen" class="screen welcome-screen active" aria-labelledby="gameTitle">
+      <div class="sea-window">
+        <div class="sun-rays"></div>
+        <div class="seaweed seaweed-left"></div>
+        <div class="seaweed seaweed-right"></div>
+        <div class="welcome-animal">🐙</div>
+        <div class="treasure">★</div>
+      </div>
+      <div class="welcome-copy">
+        <p class="eyebrow">Exploración submarina</p>
+        <h1 id="gameTitle">La misión del océano</h1>
+        <h2>Rescate de los animalitos</h2>
+        <button id="startButton" class="primary-button pulse" type="button">¡Vamos a jugar! ▶</button>
+      </div>
+    </section>
+
+    <section id="menuScreen" class="screen" aria-labelledby="menuTitle">
+      <header class="topbar">
+        <button class="round-button" id="homeButton" type="button" aria-label="Inicio">⌂</button>
+        <div class="score-pill" aria-label="Estrellas conseguidas"><span>⭐</span> <strong id="scoreValue">0</strong></div>
+        <button class="round-button sound-button" id="soundButton" type="button" aria-label="Activar o desactivar voz">🔊</button>
+      </header>
+      <div class="menu-heading">
+        <p class="eyebrow">Pequeño explorador</p>
+        <h1 id="menuTitle">Elige una misión</h1>
+      </div>
+      <nav id="missionGrid" class="mission-grid" aria-label="Misiones"></nav>
+    </section>
+
+    <section id="missionScreen" class="screen" aria-labelledby="missionTitle">
+      <header class="topbar">
+        <button class="round-button" id="backButton" type="button" aria-label="Volver al menú">←</button>
+        <div class="mission-progress"><span id="progressText">1 de 1</span><div class="progress-track"><div id="progressBar"></div></div></div>
+        <div class="score-pill"><span>⭐</span> <strong id="missionScoreValue">0</strong></div>
+      </header>
+      <div class="mission-card">
+        <div class="mission-icon" id="missionIcon" aria-hidden="true"></div>
+        <h1 id="missionTitle">Misión</h1>
+        <p id="instruction" class="instruction" aria-live="polite"></p>
+        <div id="playArea" class="play-area"></div>
+        <div id="feedback" class="feedback" aria-live="assertive"></div>
+      </div>
+    </section>
+
+    <section id="finalScreen" class="screen final-screen" aria-labelledby="finalTitle">
+      <div class="final-rays" aria-hidden="true">⭐ ✨ ⭐</div>
+      <div class="animal-parade" aria-hidden="true">
+        <span>🐬</span><span>🐢</span><span>🐙</span><span>⭐</span>
+      </div>
+      <div class="medal">🏅</div>
+      <p class="eyebrow">Misiones completas</p>
+      <h1 id="finalTitle">¡Eres un gran explorador!</h1>
+      <p>Ayudaste al océano y a todos sus amigos.</p>
+      <button id="playAgainButton" class="primary-button" type="button">Jugar de nuevo ↻</button>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
